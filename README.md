@@ -34,3 +34,7 @@ Copy `.env.example` to `.env.local` and set it on your host:
 Any host that runs Next.js 16 (Node runtime): connect the GitHub repo, build command `npm run build`, add the env vars above.
 
 The privacy / KVKK text in the dictionaries is a draft and should be reviewed before launch.
+
+### Netlify
+
+The repo includes a `netlify.toml`. Connect the GitHub repo in Netlify; it builds with `npm run build` and serves the app through Netlify's Next.js runtime (SSR, the locale proxy and the contact Server Action all work). Do not drag-and-drop the source folder, and do not switch to `output: "export"`: a static export cannot run the `/` → `/en`/`/tr` redirect or the contact form.
